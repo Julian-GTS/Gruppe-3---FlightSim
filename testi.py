@@ -1,1 +1,0 @@
-print(input("django server soon :)"))

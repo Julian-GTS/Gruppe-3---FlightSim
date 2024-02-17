@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'SimConnect.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'sim_connect_db',
+        'USER': 'dein_postgres_benutzername',
+        'PASSWORD': 'testtest321',
+        'HOST': '79.204.206.99',  # Oder die Adresse deines PostgreSQL-Servers
+        'PORT': '5432',  # Standard-Port für PostgreSQL
     }
 }
 
@@ -103,9 +107,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'de-de'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'CET'
 
 USE_I18N = True
 
