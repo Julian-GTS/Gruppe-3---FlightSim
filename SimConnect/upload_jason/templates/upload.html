@@ -8,7 +8,7 @@
 <body>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <input type="file" name="json_file">
+        <input type="file" accept=".json" name="json_file">
         <button type="submit">Hochladen</button>
     </form>
 </body>
