@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="container"></h3>
+    <script defer>
+        window.onload = () => {
+            let data = "{{ data }}";
+            let string = decodeURIComponent(data)
+                .replace(/&quot;/g, "\"")
+                .replace(/&lt;QuerySet \[/g, "")
+                .replace(/]&gt;/g, "")
+                .replace(/\([0-9][0-9], /g, "")
+                .replace(/&#x27;/g, "")
+                //.replace(/), /g, "\n")
+            document.getElementById("container").innerText = string;
+        }
+    </script>
+
+    
+</body>
+</html>
+
