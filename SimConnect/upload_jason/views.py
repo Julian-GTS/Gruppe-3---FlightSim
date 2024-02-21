@@ -6,7 +6,6 @@ import json, datetime
 def index(request):
     if request.GET.get("page", "") == "table":
         list = JsonData.objects.values_list()
-        print(list)
         result = {
             "data": [json.loads(entry[1]) for entry in list],
             "timestamps": [entry[2] for entry in list] 
