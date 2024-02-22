@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': '123',
-        'HOST': 'localhost',  # Oder die Adresse deines PostgreSQL-Servers
+        'HOST': '192.168.0.25',  # Oder die Adresse deines PostgreSQL-Servers
         'PORT': '5432',  # Standard-Port für PostgreSQL
     }
 }
