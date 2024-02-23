@@ -12,14 +12,8 @@ def index(request):
         }
         return JsonResponse(result)
     if request.GET.get("page", "") == "testpage":
-        # FlightData.objects.create(
-        #     x = 1.2,
-        #     y = 5.4,
-        #     z = 6.9,
-        #     packetTime = datetime.datetime.now()
-        # )
 
-        list_result = [entry for entry in FlightData.objects.values()]  # converts ValuesQuerySet into Python list
+        list_result = [entry for entry in FlightData.objects.values()] # converts ValuesQuerySet into Python list
 
         return JsonResponse({"data": list_result})
     if request.method == 'POST':
@@ -32,3 +26,9 @@ def index(request):
     return render(request, "upload.html")
 
 
+        # FlightData.objects.create(
+        #     x = 1.2,
+        #     y = 5.4,
+        #     z = 6.9,
+        #     packetTime = datetime.datetime.now()
+        # )
