@@ -1,11 +1,12 @@
 import json
-from django.http import Http404, HttpResponse, JsonResponse
+from django.http import FileResponse, Http404, HttpResponse, JsonResponse
 from upload_jason.models import JsonData
 
 def index(request):
     branch = request.get_host().replace(".gutscheweb.com", "")
     
-    # if request.path == "/favicon.ico":
+    if request.path == "/favicon.ico":
+        return FileResponse("./static/favicon.ico")
 
 
     if branch == "gutscheweb.com":
