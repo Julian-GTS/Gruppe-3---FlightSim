@@ -16,9 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django_icons import icon
+
 
 urlpatterns = [
     path("upload_jason/", include("upload_jason.urls")),
     path("admin/", admin.site.urls),
     path("", include("db.urls"))
 ]
+
+
