@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "upload_jason.apps.UploadJasonConfig",
     'django.contrib.admin',
     'django.contrib.auth',
+    'django_icons',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -130,3 +131,4 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
