@@ -4,6 +4,9 @@ from upload_jason.models import JsonData
 
 def index(request):
     branch = request.get_host().replace(".gutscheweb.com", "")
+    
+    # if request.path == "/favicon.ico":
+
 
     if branch == "gutscheweb.com":
         return HttpResponse("Main page.........")
