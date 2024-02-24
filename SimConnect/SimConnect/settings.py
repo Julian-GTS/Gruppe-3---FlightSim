@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'SimConnect.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'postgres', # Schwach angefangen und dann
         'USER': 'postgres', # stark nachgelassen
         'PASSWORD': '123', # Sehr sicheres Passwort
-        'HOST': '192.168.0.25', # Lokale IP von der Postgres-Machine
+        'HOST': '79.204.206.99', # Public IP von der Postgres-Machine
         'PORT': '5432', # default port ¯\_(ツ)_/¯
     }
 }
