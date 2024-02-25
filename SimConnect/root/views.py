@@ -1,7 +1,7 @@
 import json
 from django.conf import settings
 from django.http import FileResponse, Http404, HttpResponse
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 
 def index(request):
     branch = request.get_host().replace(".gutscheweb.com", "")
@@ -10,7 +10,7 @@ def index(request):
         return redirect("https://simconnect.gutscheweb.com")
 
     if branch == "simconnect":
-        return HttpResponse("Welcome to SimConnect")
+        return render(request, "index.html")
     
     else:
         raise Http404()
