@@ -4,5 +4,6 @@ from . import views
 urlpatterns = [
     path("", views.index, name="index"),
     path("jsondata", views.jsondata, name="json-data"),
-    path("flightdata", views.flightdata, name="flight-data")
+    path("flightdata", views.flightdata, name="flight-data"),
+    path("view-raw", views.viewRaw),
 ]

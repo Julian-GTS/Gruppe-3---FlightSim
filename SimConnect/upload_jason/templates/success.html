@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload erfolgreich</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #007acc;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.1s ease-in;
+            border-radius: 1em;
+        }
+    </style>
 </head>
 <body>
     <h1>Upload erfolgreich!</h1>
@@ -11,5 +31,6 @@
     <h4>
         {{ data }}
     </h4>
+    <button onclick="window.location = '{{ rawUrl }}'">Raw</button>
 </body>
 </html>
