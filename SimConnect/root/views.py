@@ -1,24 +1,19 @@
 import json
 from django.conf import settings
-from django.http import FileResponse, Http404, HttpResponse, JsonResponse
-from upload_jason.models import JsonData
+from django.http import FileResponse, Http404, HttpResponse
+from django.shortcuts import redirect
 
 def index(request):
     branch = request.get_host().replace(".gutscheweb.com", "")
 
-    if branch == "gutscheweb.com":
-        return HttpResponse("Main page.........")
+    if branch == "gutscheweb.com" or branch == "www":
+        return redirect("https://simconnect.gutscheweb.com")
 
     if branch == "simconnect":
-        list = JsonData.objects.values_list()
-        result = {
-            "data": [json.loads(entry[1]) for entry in list],
-            "timestamps": [entry[2] for entry in list] 
-        }
-        return JsonResponse(result)
+        return HttpResponse("Welcome to SimConnect")
     
     else:
-        raise Http404("Seite existiert nicht numbnuts")
+        raise Http404()
     
 def favicon(request):
     return FileResponse((settings.BASE_DIR / "static" / "favicon.ico").open("rb"))
