@@ -1,13 +1,10 @@
 import json
+from django.conf import settings
 from django.http import FileResponse, Http404, HttpResponse, JsonResponse
 from upload_jason.models import JsonData
 
 def index(request):
     branch = request.get_host().replace(".gutscheweb.com", "")
-    
-    if request.path == "/favicon.ico":
-        return FileResponse("./static/favicon.ico")
-
 
     if branch == "gutscheweb.com":
         return HttpResponse("Main page.........")
@@ -22,3 +19,6 @@ def index(request):
     
     else:
         raise Http404("Seite existiert nicht numbnuts")
+    
+def favicon(request):
+    return FileResponse((settings.BASE_DIR / "static" / "favicon.ico").open("rb"))

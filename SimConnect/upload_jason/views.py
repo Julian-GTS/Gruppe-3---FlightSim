@@ -17,11 +17,7 @@ def index(request):
         return render(request, 'success.html', {
             "testVersion": data
         })
-    return render(request, "upload.html", DJANGO_ICONS = {
-    "ICONS": {
-        "mein_icon": "far fa-my-icon"},
-    }, # domain.com/favicon.ico
-)
+    return render(request, "upload.html")
 
 def table(request):
     list = JsonData.objects.values_list()

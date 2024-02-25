@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     "upload_jason.apps.UploadJasonConfig",
     'django.contrib.admin',
     'django.contrib.auth',
-    'django_icons',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
