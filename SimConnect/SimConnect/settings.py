@@ -58,7 +58,10 @@ ROOT_URLCONF = 'SimConnect.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, '/upload_jason/templates')],
+        'DIRS': [
+            BASE_DIR / "root" / "templates",
+            BASE_DIR / "upload_jason" / "templates",
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
