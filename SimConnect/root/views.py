@@ -4,6 +4,13 @@ from django.http import FileResponse, Http404, HttpResponse
 from django.shortcuts import redirect, render
 
 def index(request):
+    """
+    Index gibt allen Anfragen auf root ("/") ein 404,
+    außer die domäne ist simconnect.gutscheweb.com,
+    gutscheweb.com oder www.gutscheweb.com. Bei den
+    letzten zwei Optionen wird der klient per 302 auf
+    die simconnect-subdomäne weitergeleitet.
+    """
     branch = request.get_host().replace(".gutscheweb.com", "")
 
     if branch == "gutscheweb.com" or branch == "www":
@@ -14,6 +21,22 @@ def index(request):
     
     else:
         raise Http404()
-    
+
+def external(request):
+    """
+    Um nun von einer anderen Domäne auf die index-seite
+    zu gelangen, wird der "external"- path verwendet.
+    Aufrufbar mit z.B. http://localhost/external.
+    """
+    return render(request, "index.html")
+
+
 def favicon(request):
+    """
+    Der /favicon.ico-path wird standardmäßig von den
+    gängigen Browsern abgerufen, ohne spezifikation im
+    HTML.
+
+    https://stackoverflow.com/questions/10218178/necessary-to-add-link-tag-for-favicon-ico
+    """
     return FileResponse((settings.BASE_DIR / "static" / "favicon.ico").open("rb"))
