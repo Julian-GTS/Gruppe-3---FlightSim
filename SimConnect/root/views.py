@@ -40,3 +40,13 @@ def favicon(request):
     https://stackoverflow.com/questions/10218178/necessary-to-add-link-tag-for-favicon-ico
     """
     return FileResponse((settings.BASE_DIR / "static" / "favicon.ico").open("rb"))
+
+def robots(request):
+    """
+    Der /robots.txt-path wird von Suchmaschinen-Crawlern
+    abgerufen, um zu erfahren, welche Seiten indexiert
+    werden dürfen und welche nicht.
+
+    https://support.google.com/webmasters/answer/6062596?hl=de
+    """
+    return FileResponse((settings.BASE_DIR / "static" / "robots.txt").open("rb"))
