@@ -80,22 +80,22 @@ WSGI_APPLICATION = 'SimConnect.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'postgres', # Schwach angefangen und dann
-#         'USER': 'postgres', # stark nachgelassen
-#         'PASSWORD': '123', # Sehr sicheres Passwort
-#         'HOST': '79.204.206.99', # Public IP von der Postgres-Machine
-#         'PORT': '5432', # default port ¯\_(ツ)_/¯
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django_fake_database_backends.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres', # Schwach angefangen und dann
+        'USER': 'postgres', # stark nachgelassen
+        'PASSWORD': '123', # Sehr sicheres Passwort
+        'HOST': '79.204.206.99', # Public IP von der Postgres-Machine
+        'PORT': '5432', # default port ¯\_(ツ)_/¯
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django_fake_database_backends.backends.mysql',
+#     }
+# }
 
 
 # Password validation
