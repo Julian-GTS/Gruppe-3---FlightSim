@@ -56,7 +56,7 @@ def viewRaw(request):
 
     response_data = {
         "data": json.loads(response.data),
-        "timestamp": response.timestamp.strftime("%d.%m.%Y %H:%M:%S"),
+        "timestamp": timezone.localtime().strftime("%d.%m.%Y %H:%M:%S"),
     }
 
     return JsonResponse(response_data)
