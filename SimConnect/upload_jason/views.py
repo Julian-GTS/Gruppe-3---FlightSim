@@ -19,7 +19,7 @@ def index(request):
     if request.method == 'POST':
         json_file = request.FILES['json_file']
         data = json_file.read().decode('utf-8')
-        dbData = JsonData.objects.create(data=data, timestamp=timezone.now())
+        dbData = JsonData.objects.create(data=data, timestamp=timezone.localtime())
         dbData.save()
         dbId = str(dbData.id)
         return render(request, 'success.html', {
