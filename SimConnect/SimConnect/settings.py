@@ -28,7 +28,13 @@ SECRET_KEY = 'django-insecure-@zk6&lgku7c52s2eg9$w8(#^z^(r-#waoa3c7!bno27!i9fs-4
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://gutscheweb.com', 'https://www.gutscheweb.com', 'https://simconnect.gutscheweb.com']
+CSRF_TRUSTED_ORIGINS = [
+    'https://gutscheweb.com',
+    'https://www.gutscheweb.com',
+    'https://simconnect.gutscheweb.com',
+    'https://flightsense.tech',
+    'https://www.flightsense.tech',
+    ]
 
 
 # Application definition
