@@ -1,16 +1,12 @@
 from django.conf import settings
 from django.http import FileResponse, Http404, HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
-from . import urls
+from . import api_response, urls
 
 def root(request):
-    return HttpResponse("api :)")
+    response = api_response.APIResponse(True, ["Welcome to the API!", "Endpoint list: /api/v1/tree"])
+    return JsonResponse(response.to_json())
 
 def tree(request):
-    return HttpResponse("bald")
-    # patterns = []
-    # for pattern in urls.urlpatterns:
-    #     print("a")
-    #     patterns.append(pattern.name)
-    
-    # return JsonResponse(patterns)
+    response = api_response.APIResponse(True, [pattern.name for pattern in urls.urlpatterns])
+    return JsonResponse(response.to_json())
