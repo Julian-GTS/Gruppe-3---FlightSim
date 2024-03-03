@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-@zk6&lgku7c52s2eg9$w8(#^z^(r-#waoa3c7!bno27!i9fs-4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = [
@@ -34,6 +34,8 @@ CSRF_TRUSTED_ORIGINS = [
     'https://simconnect.gutscheweb.com',
     'https://flightsense.tech',
     'https://www.flightsense.tech',
+    'https://sc.flightsense.tech',
+    'https://api.flightsense.tech',
     ]
 
 
@@ -57,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'root.middleware.subdomain_filter.SubdomainFilter'
 ]
 
 ROOT_URLCONF = 'SimConnect.urls'
@@ -92,7 +95,8 @@ DATABASES = {
         'NAME': 'postgres', # Schwach angefangen und dann
         'USER': 'postgres', # stark nachgelassen
         'PASSWORD': '123', # Sehr sicheres Passwort
-        'HOST': '79.204.206.99', # Public IP von der Postgres-Machine
+        # 'HOST': '79.204.206.99', # Public IP von der Postgres-Machine
+        'HOST': '192.168.0.23', # Public IP von der Postgres-Machine
         'PORT': '5432', # default port ¯\_(ツ)_/¯
     }
 }
