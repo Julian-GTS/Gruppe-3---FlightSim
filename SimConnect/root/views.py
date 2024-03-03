@@ -11,13 +11,19 @@ def index(request):
     letzten zwei Optionen wird der klient per 302 auf
     die simconnect-subdomäne weitergeleitet.
     """
-    branch = request.get_host().replace(".gutscheweb.com", "")
+    host = request.get_host()
 
-    if branch == "gutscheweb.com" or branch == "www":
-        return redirect("https://simconnect.gutscheweb.com")
+    allowed_domains = ["gutscheweb.com", "flightsense.tech"]
 
-    if branch == "simconnect":
+    domain = host.split(".")[-2] + "." + host.split(".")[-1]
+    subdomain = host.split(".")[0] if len(host.split(".")) > 2 else None
+    print(subdomain, domain, host)
+
+    if subdomain == "www":
         return render(request, "index.html")
+
+    if domain in allowed_domains:
+        return redirect("https://www.flightsense.tech")
     
     else:
         raise Http404()
