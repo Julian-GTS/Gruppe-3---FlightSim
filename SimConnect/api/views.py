@@ -15,6 +15,7 @@ def root(request):
 
 def tree(request):
     response = api_response.APIResponse(True, [pattern.name for pattern in urls.urlpatterns])
+    return JsonResponse(response.to_json())
 
 def serve_image(request):
     # Assuming you have the base64 encoded image stored in a variable called 'image_data'
