@@ -95,8 +95,8 @@ DATABASES = {
         'NAME': 'postgres', # Schwach angefangen und dann
         'USER': 'postgres', # stark nachgelassen
         'PASSWORD': '123', # Sehr sicheres Passwort
-        # 'HOST': '79.204.206.99', # Public IP von der Postgres-Machine
-        'HOST': '192.168.0.23', # Public IP von der Postgres-Machine
+        'HOST': '79.218.226.195', # Public IP von der Postgres-Machine
+        # 'HOST': '192.168.0.23', # Private IP von der Postgres-Machine
         'PORT': '5432', # default port ¯\_(ツ)_/¯
     }
 }
