@@ -20,10 +20,10 @@ def index(request):
     print(subdomain, domain, host)
 
     if subdomain == "www":
-        return render(request, "index.html")
+        return redirect("https://flightsense.tech")
 
     if domain in allowed_domains:
-        return redirect("https://www.flightsense.tech")
+        return render(request, "index.html")
     
     else:
         raise Http404()

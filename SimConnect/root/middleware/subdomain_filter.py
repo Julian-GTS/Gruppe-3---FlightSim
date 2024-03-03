@@ -7,5 +7,5 @@ class SubdomainFilter:
         if len(host_parts) > 2 and host_parts[0] == 'api':
             request.urlconf = 'api.urls'
         elif len(host_parts) > 2 and host_parts[0] == 'sc':
-            request.urlconf = 'upload_jason.urls'
+            request.urlconf = 'SimConnect.urls'
         return self.get_response(request)
