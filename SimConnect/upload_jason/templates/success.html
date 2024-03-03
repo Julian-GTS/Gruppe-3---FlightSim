@@ -23,14 +23,32 @@
             transition: 0.1s ease-in;
             border-radius: 1em;
         }
+        
+        pre {
+            width: 80%;
+            margin: auto;
+        }
+
+        code {
+            display: block;
+            text-align: left;
+            white-space: pre-wrap;
+            padding-left: 25em;
+        }
     </style>
 </head>
 <body>
     <h1>Upload erfolgreich!</h1>
     <p>Die JSON-Daten wurden erfolgreich in der PostgreSQL-Datenbank gespeichert.</p><br><br>
-    <h4>
-        {{ data }}
-    </h4>
-    <button onclick="window.location = '{{ rawUrl }}'">Raw</button>
+    <button onclick="window.location = '{{ rawUrl }}'">Raw</button><br><br>
+    <pre>
+        <code id="jsonDump"></code>
+    </pre>
+    <script defer>
+        window.onload = () => {
+            let jsonData = JSON.parse("{{data|escapejs}}");
+            document.getElementById('jsonDump').textContent = JSON.stringify(jsonData, null, 2);
+        }
+    </script>
 </body>
 </html>
