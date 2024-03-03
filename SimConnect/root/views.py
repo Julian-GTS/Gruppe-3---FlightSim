@@ -17,7 +17,6 @@ def index(request):
 
     domain = host.split(".")[-2] + "." + host.split(".")[-1]
     subdomain = host.split(".")[0] if len(host.split(".")) > 2 else None
-    print(subdomain, domain, host)
 
     if subdomain == "www":
         return redirect("https://flightsense.tech")

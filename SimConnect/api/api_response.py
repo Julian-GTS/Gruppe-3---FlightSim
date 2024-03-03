@@ -2,7 +2,6 @@ from django.utils import timezone
 
 class APIResponse:
     def __init__(self, success, data):
-        print(data)
         self.success = success
         self.message = "The request was successful." if success else "Failure"
         self.errors = [] if success else data
