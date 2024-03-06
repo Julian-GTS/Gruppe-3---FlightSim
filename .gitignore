@@ -2,3 +2,4 @@
 **/*.whl
 **/migrations/**
 .vscode/launch.json
+Gruppe-3---FlightSim.code-workspace
