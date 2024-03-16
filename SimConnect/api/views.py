@@ -8,6 +8,8 @@ from upload_jason.models import JsonData
 import base64
 from PIL import Image, ImageDraw, ImageFont
 
+from . import flight_data, flight_data_helper
+
 def redirect_latest(request):
     return redirect("api-root")
 
@@ -70,3 +72,10 @@ def serve_image(request):
     response.write(modified_image_stream.getvalue())
 
     return response
+
+def flight_data(request):
+    flight_data_obj = flight_data_helper.generate_flight_data()
+    file_path = settings.BASE_DIR / "flight_data.json"
+    flight_data_helper.write_flight_data_to_file(flight_data_obj, file_path)
+    response = api_response.APIResponse(True, flight_data_obj.to_json())
+    return JsonResponse(response.to_json())

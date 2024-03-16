@@ -7,4 +7,5 @@ urlpatterns = [
     path("v1/tree", views.tree, name="endpoint-list"),
     path("v1/serve-image", views.serve_image, name="serve-image"),
     path("v1/jsondata", views.jsondata, name="jsondata"),
+    path("v1/flightdata", views.flight_data, name="flightdata"),
 ]
