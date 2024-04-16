@@ -1,3 +1,6 @@
-django
-psycopg2
-Pillow
+asgiref==3.8.1
+Django==5.0.4
+pillow==10.3.0
+sqlparse==0.5.0
+typing_extensions==4.11.0
+psycopg2==2.9.9

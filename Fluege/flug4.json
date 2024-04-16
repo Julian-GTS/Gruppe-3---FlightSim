@@ -1,0 +1,29 @@
+{
+  "aircraft": "Boeing 747",
+  "flightNumber": "MSFS24",
+  "origin": "JFK",
+  "destination": "LHR",
+  "departureTime": "2021-12-25T10:00:00+00:00Z",
+  "arrivalTime": "2021-12-25T14:00:00+00:00Z",
+  "position": {
+    "latitude": 40.724492166803735,
+    "longitude": -74.37412918046641,
+    "altitude": 38411
+  },
+  "speed": {
+    "indicatedAirSpeed": 269,
+    "trueAirSpeed": 545,
+    "groundSpeed": 541
+  },
+  "orientation": {
+    "pitch": 0,
+    "roll": 0,
+    "yaw": 0
+  },
+  "pilotRating": {
+    "takeoffSmoothness": 8.159549204404092,
+    "landingSmoothness": 9.659622319563486,
+    "navigationAccuracy": 9.581852938504,
+    "communicationClarity": 8.881798088765148
+  }
+}

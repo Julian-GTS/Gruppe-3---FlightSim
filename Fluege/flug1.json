@@ -1,0 +1,29 @@
+{
+  "aircraft": "Boeing 747",
+  "flightNumber": "MSFS20",
+  "origin": "JFK",
+  "destination": "LHR",
+  "departureTime": "2022-01-02T21:00:00+00:00Z",
+  "arrivalTime": "2022-01-03T01:00:00+00:00Z",
+  "position": {
+    "latitude": 40.6154339098109,
+    "longitude": -73.75762301445282,
+    "altitude": 33348
+  },
+  "speed": {
+    "indicatedAirSpeed": 280,
+    "trueAirSpeed": 572,
+    "groundSpeed": 500
+  },
+  "orientation": {
+    "pitch": 0,
+    "roll": 0,
+    "yaw": 0
+  },
+  "pilotRating": {
+    "takeoffSmoothness": 8.806905878635483,
+    "landingSmoothness": 9.728124892349616,
+    "navigationAccuracy": 8.564853242161094,
+    "communicationClarity": 8.093213403778204
+  }
+}

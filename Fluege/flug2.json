@@ -1,0 +1,29 @@
+{
+  "aircraft": "Boeing 747",
+  "flightNumber": "MSFS22",
+  "origin": "JFK",
+  "destination": "LHR",
+  "departureTime": "2022-01-01T03:00:00+00:00Z",
+  "arrivalTime": "2022-01-01T07:00:00+00:00Z",
+  "position": {
+    "latitude": 40.278494468852855,
+    "longitude": -73.51414029257232,
+    "altitude": 39417
+  },
+  "speed": {
+    "indicatedAirSpeed": 266,
+    "trueAirSpeed": 490,
+    "groundSpeed": 537
+  },
+  "orientation": {
+    "pitch": 0,
+    "roll": 0,
+    "yaw": 0
+  },
+  "pilotRating": {
+    "takeoffSmoothness": 8.893809296754787,
+    "landingSmoothness": 8.393304839898587,
+    "navigationAccuracy": 8.14510461565878,
+    "communicationClarity": 7.2758547296354745
+  }
+}
